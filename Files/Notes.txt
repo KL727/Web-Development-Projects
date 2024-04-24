@@ -10,4 +10,31 @@
     Special Characters
         ../    up a level
         ./     current directory
-        
+
+4.1 Webpages
+    project:
+        index.html
+        about.html
+        contact.html
+
+        assets
+            images
+                cat.png
+
+
+NOTICE: href is an attribute for anchor tag
+        <a href="" />
+
+HTML Boilerplate
+
+    <!DOCTYPE html>
+    <html lang="en"> # Attribute: language = english
+        <head>
+            <meta charset="UTF-8">
+            <title>My Website</title>
+        </head>
+
+        <body> #Content
+            <h1>Hello World!</h1>
+        </body>
+    </html>
