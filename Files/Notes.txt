@@ -1,0 +1,13 @@
+4 Multi-Page Websites
+4.0 Absolute file path 
+        Root directory, the full path to the file or directory
+        eg. C:\Users\Administrator\Desktop\Web Development Projects
+    
+    Relative file path
+        Path to a file or directory that is relative to the Current Directory
+        eg. Images/cat.png
+
+    Special Characters
+        ../    up a level
+        ./     current directory
+        
