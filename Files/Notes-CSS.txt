@@ -107,3 +107,8 @@ CSS
     font-family:
         字体
         https://fonts.google.com/
+
+    Text Align:
+        h1{
+            text-align: center
+        }
