@@ -1,0 +1,89 @@
+CSS
+    Inline: <tag style="css" />     
+        <html style="background:blue">
+        </html>
+        #in same line with tag, useful to single element
+
+    Internal: <style>css</style>
+        <style>
+            html{
+                background: red;
+            }
+        </style>
+        #apply anywhere, only to one html document, useful for single webpage, not for multipage Websites
+
+    External: <link href="style.css" />   #most commonly used, separated file "./styles.css"
+        <html>
+            <head>
+                <link
+                    rel="stylesheet"  #relationship, what is the role of this thing(rel) we're linking to 
+                    href="./styles.css" #location, where is it located.
+                />
+            </head>
+        </html>
+
+    ./styles.css :
+        html{
+                background: red;
+            }
+
+5.3 CSS Selectors:
+        Element Selector:
+            h1{
+                color:blue          #select all h1
+            }
+
+        Class Selector:     #class--attribute
+            .red-heading{
+                color:red;
+            }
+                            #select the only element that has a class
+            eg.
+                index.html:
+                <h2 class="red-text">Red</h2>  #only this one turns red
+                <h2>Green</h2>
+                <h2>Blue</h2>
+
+                style.css:
+                .red-text{
+                   color:red;
+                }
+
+        Id Selector:
+            #main{
+                color:red       //select all element with particular id attribute
+            }
+
+            eg.
+                index.html:
+                <h2 id="main">Red</h2>  #only this one turns red
+                <h2>Green</h2>
+                <h2>Blue</h2>
+
+                style.css:
+                #main{
+                   color:red;
+                }
+*******id vs class
+*******id: one element, unique
+*******class: many elements
+
+    Attribute Selector: 
+        p[draggable]{    //p:html element; draggable: attribute
+            color:red    // select all p element with draggable attribute
+        }
+
+        eg.
+            <p draggable="true">Drag me</p>
+            <p draggable="false">Don't drag me</p>  #only this one turns red
+            <p>Drag me</p>
+
+            style.css:
+                p[draggable="false"]{
+                    color:red;
+                }
+
+    Universal Selector: //select all no matter what id, what attribute......
+        *{
+            color:red
+        }
