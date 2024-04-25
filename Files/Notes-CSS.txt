@@ -87,3 +87,23 @@ CSS
         *{
             color:red
         }
+
+
+6.0
+6.1
+    font-size:10px;
+
+        1px(Pixel) = 1/96th inch = 0.26mm    //*square
+        1pt(Point) = 1/72nd inch = 0.35mm
+        1em = 100% of parent  //relative size，以父元素为基准
+        1rem = 100% of root   //relative size, 以根元素为基准，也就是整个html的size，
+                              //此情况下，parent element的变化不对它产生影响
+
+    font-weight:
+        normal/bold : Keywords
+        lighter/bolder ： Relative to Parent +-100
+        number : 100-900 (light-bold)
+
+    font-family:
+        字体
+        https://fonts.google.com/
