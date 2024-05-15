@@ -112,3 +112,46 @@ CSS
         h1{
             text-align: center
         }
+
+7.1 Cascading Style Sheets
+    Internal css style > External css style
+    当同时存在internal和external的css，只采用internal
+
+    当external css中存在对同一个元素进行两种style时，采用后一个。
+
+    Specificity：
+        eg:
+            <li id="first-id" class="first-class" draggable>
+            元素li同时存在三个attribute。
+
+            li{color:blue;}
+            .first-class{color:red;}
+            li[draggable]{color:purple;}
+            #first-id{color:orange;}
+            采用最后一个。
+
+    Type：external< internal< inline.
+
+    Keywords: Importance:
+        color: red;
+        color: green !important; 表示这一条是最要紧的。这一条rule会代替上一条。
+
+7.2 Combining Selector
+    rules:
+        Group = Apply to all selectors. 
+        
+        Child = Apply to direct child of left side
+        div包含div，第一个为parent，第二个为child。
+
+        以上两个都可以用逗号将两个selector分开。
+        
+        Descendant = Apply to a descendant of left side
+        两个selector中间用空格隔开即可。左为ancestor，右为descendant。
+
+        Chaining = Apply where ALL selectors are true
+        selectorselector{ 
+
+        }
+        从element开始写
+
+        Combining Combiners
