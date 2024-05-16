@@ -172,3 +172,42 @@ CSS
             数字后面不能加单位。
             z-index 只能应用于相对定位、绝对定位和固定定位的元素，其他标准流、浮动和静态定位无效。
 
+8.0 CSS Display
+    display : block 以块的形式展示并独占一行的元素,前后会带有换行符
+    display : inline 不能再设置宽和高以及上下方向的margin和padding
+    display ：inline-block 设置了inline-block属性的元素既具有block元素可以设置width和height属性的特性，又保持了inline元素不换行的特性
+    display :none none这个值表示此元素将不被显示。
+
+8.1 CSS Float
+    把某些内联元素飘出来，然后让其他内联元素围在漂浮元素的周围，就类似于office中的图片环绕。
+    浮动只能设置成left或right，而且浮动一般都是对可以设置尺寸的元素操作，比如<img>、block、inline-block。
+
+8.3 Media Query
+    以 @media 关键字开始，后跟一组条件，如屏幕宽度、设备方向等，然后是一对大括号 {}，在其中可以放置特定条件下应用的 CSS 样式。
+
+    eg: @media only screen and (max-width: 600px) {
+        /* 在屏幕宽度小于等于600px时应用的样式 */
+        }
+
+    条件:
+    屏幕宽度：max-width, min-width
+    屏幕高度：max-height, min-height
+    设备方向：orientation: portrait, orientation: landscape
+    分辨率：min-resolution, max-resolution
+    
+    eg:
+        /* 当屏幕宽度小于等于600px时，将段落文字颜色设置为红色 */
+        @media only screen and (max-width: 600px) {
+            p {
+                color: red;
+            }
+        }
+
+        /* 当屏幕宽度大于600px时，将段落文字颜色设置为蓝色 */
+        @media only screen and (min-width: 601px) {
+            p {
+                color: blue;
+            }
+        }
+    
+    在编写媒体查询时，注意顺序，确保更具体的条件在前面
