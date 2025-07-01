@@ -1,7 +1,14 @@
 //alert("hello");
+var buttonColours = ["red", "blue", "green", "yellow"];
+var userClickedPattern = [];
 var gamePattern = [];
 
-var buttonColours = ["red", "blue", "green", "yellow"];
+// User click button
+$(".btn").click(function () {
+  var userChosenColour = $(this).attr("id");
+  userClickedPattern.push(userChosenColour);
+  console.log("User clicked:", userClickedPattern);
+});
 
 function nextSequence() {
   //random from 0-3
