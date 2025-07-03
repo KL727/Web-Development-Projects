@@ -7,9 +7,12 @@ var gamePattern = [];
 $(".btn").click(function () {
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
-  console.log("User clicked:", userClickedPattern);
+
   //when user clicked, play sound
   playSound(userChosenColour);
+  animatePress(userChosenColour);
+
+  console.log("User clicked:", userClickedPattern);
 });
 
 //play sounds
@@ -29,4 +32,13 @@ function nextSequence() {
     .fadeOut(100)
     .fadeIn(100);
   playSound(randomChosenColour);
+}
+
+function animatePress(currentColour) {
+  //apply button style
+  $("#" + currentColour).addClass("pressed");
+  //remove style after 100ms
+  setTimeout(function () {
+    $("#" + currentColour).removeClass("pressed");
+  }, 100);
 }
