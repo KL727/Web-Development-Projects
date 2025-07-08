@@ -83,5 +83,15 @@ function checkAnswer(currentLevel) {
 
     // Step 3: Change title
     $("#level-title").text("Game Over, Press Any Key to Restart");
+
+    // Restart game
+    startOver();
   }
+}
+
+// Reset game state
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
 }
