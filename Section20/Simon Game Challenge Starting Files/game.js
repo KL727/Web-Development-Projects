@@ -24,6 +24,7 @@ $(".btn").click(function () {
   playSound(userChosenColour);
   animatePress(userChosenColour);
 
+  checkAnswer(userClickedPattern.length - 1);
   console.log("User clicked:", userClickedPattern);
 });
 
@@ -57,4 +58,20 @@ function animatePress(currentColour) {
   setTimeout(function () {
     $("#" + currentColour).removeClass("pressed");
   }, 100);
+}
+
+function checkAnswer(currentLevel) {
+  // Check if the user's most recent answer is correct
+  if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
+    console.log("success");
+
+    // If the user has completed the full sequence
+    if (userClickedPattern.length === gamePattern.length) {
+      setTimeout(function () {
+        nextSequence(); // Move to the next level
+      }, 1000);
+    }
+  } else {
+    console.log("wrong");
+  }
 }
