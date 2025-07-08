@@ -72,6 +72,16 @@ function checkAnswer(currentLevel) {
       }, 1000);
     }
   } else {
-    console.log("wrong");
+    // Step 1: Play wrong sound
+    playSound("wrong");
+
+    // Step 2: Flash red background
+    $("body").addClass("game-over");
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
+
+    // Step 3: Change title
+    $("#level-title").text("Game Over, Press Any Key to Restart");
   }
 }
